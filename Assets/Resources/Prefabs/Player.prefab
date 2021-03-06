@@ -288,8 +288,8 @@ MonoBehaviour:
     m_Bits: 8
   isGrounded: 0
   miniMap: {fileID: 0}
-  jumpSound: {fileID: 0}
-  hitSound: {fileID: 0}
+  jumpSound: {fileID: 8641138814494746759}
+  hitSound: {fileID: 5398617363202335735}
 --- !u!1 &6772298074463666391
 GameObject:
   m_ObjectHideFlags: 0

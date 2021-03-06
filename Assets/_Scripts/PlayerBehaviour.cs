@@ -23,7 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     [Header("Player Sounds")]
     public AudioSource jumpSound;
-    public AudioSource hitSound;
+    public AudioSource hitSound;  
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +52,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (Input.GetButton("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+            jumpSound.Play();
         }
 
         velocity.y += gravity * Time.deltaTime;
