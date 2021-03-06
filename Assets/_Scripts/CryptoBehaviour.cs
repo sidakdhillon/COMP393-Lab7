@@ -29,11 +29,14 @@ public class CryptoBehaviour : MonoBehaviour
     [Header("Attack")] 
     public float distance;
 
+    public HealthBarScreenSpaceController playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        playerHealth = FindObjectOfType<HealthBarScreenSpaceController>();
     }
 
     // Update is called once per frame
@@ -45,11 +48,12 @@ public class CryptoBehaviour : MonoBehaviour
         }
 
 
-        if(HasLOS && Vector3.Distance(transform.position, player.transform.position) < distance)
+        if(HasLOS && Vector3.Distance(transform.position, player.transform.position) < distance  )
         {
                 // could be an attack
             animator.SetInteger("AnimState", (int)CryptoState.KICK );
             transform.LookAt(transform.position - player.transform.forward);
+            playerHealth.TakeDamage(20);
 
             if (agent.isOnOffMeshLink)
             {
