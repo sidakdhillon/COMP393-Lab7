@@ -8,8 +8,12 @@ public enum CryptoState
 {
     IDLE,
     RUN,
-    JUMP
+    JUMP,
+    KICK
 }
+
+
+
 
 
 public class CryptoBehaviour : MonoBehaviour
@@ -18,9 +22,12 @@ public class CryptoBehaviour : MonoBehaviour
     public bool HasLOS;
 
     public GameObject player;
-
     private NavMeshAgent agent;
     private Animator animator;
+
+
+    [Header("Attack")] 
+    public float distance;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +45,10 @@ public class CryptoBehaviour : MonoBehaviour
         }
 
 
-        if(HasLOS && Vector3.Distance(transform.position, player.transform.position) < 2.5)
+        if(HasLOS && Vector3.Distance(transform.position, player.transform.position) < distance)
         {
                 // could be an attack
-            animator.SetInteger("AnimState", (int)CryptoState.IDLE);
+            animator.SetInteger("AnimState", (int)CryptoState.KICK );
             transform.LookAt(transform.position - player.transform.forward);
 
             if (agent.isOnOffMeshLink)
