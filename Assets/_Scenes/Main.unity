@@ -2280,11 +2280,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2396191597079866062, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2396191597079866062, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6129071363819019753, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
       propertyPath: m_RootOrder
@@ -2332,11 +2332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6792841394953373523, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
       propertyPath: m_Name
-      value: Crypto
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6792841394953373523, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d13e8f084a91c54b837e6c5cf4401c9, type: 3}
