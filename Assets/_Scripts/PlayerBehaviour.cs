@@ -21,6 +21,10 @@ public class PlayerBehaviour : MonoBehaviour
     [Header("MiniMap")] 
     public GameObject miniMap;
 
+    [Header("Player Sounds")]
+    public AudioSource jumpSound;
+    public AudioSource hitSound;
+
     // Start is called before the first frame update
     void Start()
     {
